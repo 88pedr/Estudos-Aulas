@@ -1,0 +1,137 @@
+\documentclass[12pt,openany,oneside,a4paper,brazil]{abntex2}
+%article,beamer,book,,letter,abnTeX2| 
+
+\usepackage[utf8]{inputenc} % Permite digitar acentos normalmente no código
+\usepackage[T1]{fontenc}    % Ajusta a codificação das fontes para o PDF
+\usepackage[brazil]{babel}
+
+%variavies que serao usada na construção do relatorio
+\titulo{Relatório de Estágio}
+\autor{Pedro Henrique Peixoto Cardoso}
+\data{Outubro de 2026}
+\instituicao{Instituto Federal de Educação, Ciência e Tecnologia da Bahia -- Campus Feira de Santana}
+\local{Feira de Santana -- BA}
+\preambulo{Relatório de Estágio supervisionado apresentado ao curso de Bacharelado em Sistemas de Informação do Instituto Federal de Educação, Ciência e Tecnologia da Bahia -- Campus Feira de Santana, como requisito parcial para avaliação e conclusão da disciplina.}
+\orientador{Fernanda}
+
+
+% --- CUSTOMIZAÇÃO DA CAPA ---
+\renewcommand{\imprimircapa}{%
+  \begin{capa}%
+    \center
+    {\ABNTEXchapterfont\large\imprimirinstituicao} % Puxa o nome do IFBA para o topo
+    
+    \vspace*{\fill}
+    
+    {\ABNTEXchapterfont\large\imprimirautor}
+    
+    \vspace*{\fill}
+    \begin{center}
+    \ABNTEXchapterfont\bfseries\LARGE\imprimirtitulo
+    \end{center}
+    \vspace*{\fill}
+    
+    {\large\imprimirlocal}
+    \par
+    {\large\imprimirdata}
+    \vspace*{1cm}
+  \end{capa}
+}
+\makeatletter
+\renewcommand{\folhaderostocontent}{
+  \begin{center}
+    {\ABNTEXchapterfont\large\imprimirautor}
+    \vspace*{\fill}\vspace*{\fill}
+    \begin{center}
+      \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+    \end{center}
+    \vspace*{\fill}
+    
+    \abntex@ifnotempty{\imprimirpreambulo}{%
+      \hspace{.45\textwidth}
+      \begin{minipage}{.5\textwidth}
+        \SingleSpacing
+        \imprimirpreambulo
+      \end{minipage}%
+      \vspace*{\fill}
+    }%
+    
+    % A instrução que imprimia a instituição centralizada foi removida daqui
+    
+    {\large\imprimirorientadorRotulo~\imprimirorientador\par}
+    \abntex@ifnotempty{\imprimircoorientador}{%
+      {\large\imprimircoorientadorRotulo~\imprimircoorientador}%
+    }%
+    \vspace*{\fill}
+    
+    {\large\imprimirlocal}
+    \par
+    {\large\imprimirdata}
+    \vspace*{1cm}
+  \end{center}
+}
+\makeatother
+
+\begin{document}
+%-------------------------------------------------------%
+%Elementos agora pre-textuais como capa e contra capa
+\pretextual
+\imprimircapa
+\imprimirfolhaderosto
+\newpage
+\tableofcontents*
+\imprimirorientadorRotulo
+\begin{resumo}
+\vspace{\onelineskip}
+\noindent
+\textbf{Palavras-chave}: latex. abntex. editoração de texto.
+\end{resumo}
+
+%-------------------------------------------------------%
+%ELEMENTOS TEXTUAIS%
+\textual
+
+\chapter{Introdução}
+
+\chapter{Desenvolvimento}
+\section{teste}
+
+\chapter{Conclusão}
+% no section ele tem 2 parametros onde o primeiro é 
+%o nome que ficara no sumario usando [] para este caso
+%\section*{nome da seção}
+%-------------------------------------------------------%
+%ELEMENTOS POS-TEXTUAIS
+\postextual
+
+\end{document}
+
+% à esquerda	flushleft
+% à direita	flushright
+% centralizado	center
+
+% estilo	Comando para trecho	Comando para bloco
+% monespaçado	\texttt{texto}	{ \ttfamily texto }
+% sans-serif	\textsf{texto}	{ \sffamily texto }
+% serif	\textrm{texto}	{ \rmfamily texto }
+% negrito	\textbf{texto}	{ \bfseries texto }
+% itálico	\textit{texto}	{ \itshape texto }
+% inclinado	\textsl{texto}	{ \slshape texto }
+% maiúsculas	\textsc{texto}	{ \scshape texto }
+% sublinhado	\underline{texto}	não tem
+% enfatizado	\emph{texto}	não tem
+
+% \tiny
+% \scriptsize
+% \footnotesize
+% \small
+% \normalsize
+% \large
+% \Large
+% \LARGE
+% \huge
+% \Huge
+
+% \vspace{2cm} (adiciona 2 centímetros de espaço vertical).
+
+% \hspace{10pt} (adiciona 10 pontos de espaço horizontal).
